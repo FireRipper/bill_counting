@@ -61,6 +61,9 @@
             this.mTB7 = new System.Windows.Forms.MaskedTextBox();
             this.mTB8 = new System.Windows.Forms.MaskedTextBox();
             this.mTB9 = new System.Windows.Forms.MaskedTextBox();
+            this.mTB10 = new System.Windows.Forms.MaskedTextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -227,7 +230,7 @@
             this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label22.ForeColor = System.Drawing.SystemColors.Menu;
             this.label22.Image = ((System.Drawing.Image)(resources.GetObject("label22.Image")));
-            this.label22.Location = new System.Drawing.Point(37, 313);
+            this.label22.Location = new System.Drawing.Point(34, 358);
             this.label22.Name = "label22";
             this.label22.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label22.Size = new System.Drawing.Size(425, 40);
@@ -243,10 +246,10 @@
             this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(71, 356);
+            this.button1.Location = new System.Drawing.Point(68, 401);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(350, 35);
-            this.button1.TabIndex = 41;
+            this.button1.TabIndex = 42;
             this.button1.Text = "Очистить все вводимые поля";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Btn_Clear_all_mtb);
@@ -467,13 +470,54 @@
             this.mTB9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mTB9_MouseClick);
             this.mTB9.TextChanged += new System.EventHandler(this.mTB9_TextChanged);
             // 
+            // mTB10
+            // 
+            this.mTB10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mTB10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.mTB10.Location = new System.Drawing.Point(232, 328);
+            this.mTB10.Mask = "00000000";
+            this.mTB10.Name = "mTB10";
+            this.mTB10.ResetOnSpace = false;
+            this.mTB10.Size = new System.Drawing.Size(110, 21);
+            this.mTB10.TabIndex = 41;
+            this.mTB10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mTB10_MouseClick);
+            this.mTB10.TextChanged += new System.EventHandler(this.mTB10_TextChanged);
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label23.Image = ((System.Drawing.Image)(resources.GetObject("label23.Image")));
+            this.label23.Location = new System.Drawing.Point(345, 328);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(135, 22);
+            this.label23.TabIndex = 43;
+            this.label23.Text = "0";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.label24.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label24.Image = ((System.Drawing.Image)(resources.GetObject("label24.Image")));
+            this.label24.Location = new System.Drawing.Point(11, 322);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(211, 36);
+            this.label24.TabIndex = 42;
+            this.label24.Text = "Сумма денег (терминал) :";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Calculation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(499, 404);
+            this.ClientSize = new System.Drawing.Size(499, 444);
+            this.Controls.Add(this.mTB10);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.mTB9);
             this.Controls.Add(this.mTB8);
             this.Controls.Add(this.mTB7);
@@ -483,7 +527,6 @@
             this.Controls.Add(this.mTB3);
             this.Controls.Add(this.mTB2);
             this.Controls.Add(this.mTB1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
@@ -506,6 +549,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -552,6 +596,9 @@
         private System.Windows.Forms.MaskedTextBox mTB7;
         private System.Windows.Forms.MaskedTextBox mTB8;
         private System.Windows.Forms.MaskedTextBox mTB9;
+        private System.Windows.Forms.MaskedTextBox mTB10;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
     }
 }
 

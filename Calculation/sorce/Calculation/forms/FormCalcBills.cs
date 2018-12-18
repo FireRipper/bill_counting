@@ -8,7 +8,8 @@ namespace Calculation
         public int[] val_​for_calc = new int[] { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
 
         public int bill_500, res_1, bill_200, res_2, bill_100, res_3, bill_50, res_4,
-                   bill_20, res_5, bill_10, res_6, bill_5, res_7, bill_2, res_8, bill_1, res_9;
+                   bill_20, res_5, bill_10, res_6, bill_5, res_7, bill_2, res_8, bill_1, res_9,
+                   terminal, res_10;
 
         public Calculation()
         {
@@ -26,6 +27,7 @@ namespace Calculation
             calc_5();
             calc_2();
             calc_1();
+            calc_terminal();
             sum_all_bills();
         }
 
@@ -42,8 +44,9 @@ namespace Calculation
             res_7 = Convert.ToInt32(label15.Text);
             res_8 = Convert.ToInt32(label14.Text);
             res_9 = Convert.ToInt32(label13.Text);
+            res_10 = Convert.ToInt32(label23.Text);
 
-            results_sum = res_1 + res_2 + res_3 + res_4 + res_5 + res_6 + res_7 + res_8 + res_9;
+            results_sum = res_1 + res_2 + res_3 + res_4 + res_5 + res_6 + res_7 + res_8 + res_9 + res_10;
 
             label22.Text = Convert.ToString("Итого: " + results_sum + " грн.");
         }
@@ -165,6 +168,11 @@ namespace Calculation
             ((MaskedTextBox)sender).SelectionStart = 0;
         }
 
+        private void mTB10_MouseClick(object sender, MouseEventArgs e)
+        {
+            ((MaskedTextBox)sender).SelectionStart = 0;
+        }
+
         private void calc_20()
         {
             if (string.IsNullOrEmpty(mTB5.Text))
@@ -255,6 +263,18 @@ namespace Calculation
             }
         }
 
+        private void calc_terminal()
+        {
+            if (string.IsNullOrEmpty(mTB10.Text))
+            {
+                label23.Text = Convert.ToString("0");
+            }
+            else
+            {
+                label23.Text = Convert.ToString(mTB10.Text);
+            }
+        }
+
         private void Btn_Clear_all_mtb(object sender, EventArgs e)
         {
             ClearAlltextBox();
@@ -303,6 +323,11 @@ namespace Calculation
         }
 
         private void mTB9_TextChanged(object sender, EventArgs e)
+        {
+            Calculate();
+        }
+
+        private void mTB10_TextChanged(object sender, EventArgs e)
         {
             Calculate();
         }
