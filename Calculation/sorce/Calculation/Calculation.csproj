@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +47,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\calculate.cs" />
     <Compile Include="forms\FormCalcBills.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\FormCalcBills.Designer.cs">
       <DependentUpon>FormCalcBills.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\formCalculationEUR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\formCalculationEUR.Designer.cs">
+      <DependentUpon>formCalculationEUR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\formCalculationUAH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\formCalculationUAH.Designer.cs">
+      <DependentUpon>formCalculationUAH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\formCalculationUSD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\formCalculationUSD.Designer.cs">
+      <DependentUpon>formCalculationUSD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\FormCalcBills.resx">
       <DependentUpon>FormCalcBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\formCalculationEUR.resx">
+      <DependentUpon>formCalculationEUR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\formCalculationUAH.resx">
+      <DependentUpon>formCalculationUAH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\formCalculationUSD.resx">
+      <DependentUpon>formCalculationUSD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

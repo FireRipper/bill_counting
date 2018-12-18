@@ -3,8 +3,7 @@
     "",
     "\\Calculation",
     "\\Calculation\\sorce",
-    "\\Calculation\\sorce\\Calculation",
-    "\\Calculation\\sorce\\Calculation\\forms"
+    "\\Calculation\\sorce\\Calculation"
   ],
   "SelectedNode": "\\Calculation\\sorce\\Calculation.sln",
   "PreviewInSolutionExplorer": false
